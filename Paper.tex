@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Foreign Aid Choices and Effects}
+\author{Nicholas Ray}
+\date{September 2022}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{setspace}
+\doublespacing
+\usepackage[backend=biber, style=authoryear, maxbibnames=99]{biblatex}
+\renewbibmacro{in:}{}
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}
+  \setunit*{\addnbthinspace}
+  \printfield{number}
+  \setunit{\addcomma\space}
+  \printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+\AtEveryBibitem{
+  \clearfield{issn}
+  \clearfield{month}
+  \clearfield{urlyear}
+  \clearlist{language}
+  \clearfield{note}
+  \ifentrytype{online}{}{
+    \clearfield{url}
+  }
+}
+\addbibresource{References.bib}
+\begin{document}
+\maketitle
+\section*{What needs to be explained} 
+Developing countries seem to have an increased ability to choose donors for foreign aid. Not only has China been giving an incredible amount of aid, but now the U.S. and G7 are expanding their aid opportunities. Given this phenomenon, how do aid-seeking countries decide between bilateral donors and international institutions like the IMF and World Bank? And, how does choosing Chinese money over IMF funds, for instance, affect the politics of the recipient country? In other words, what is the political difference between receiving money from international organizations and other entities, like the U.S. or China? Is the BRI really an attractive substitute for IMF funding?
+
+\section*{Theory} 
+Given that there are more than one donors offering money, recipients pick the sum that maximizes their utility. Their utility function has two parameters: net value of the sum minus the cost of concessions to the donor. Assumption: 1) donors have strategic interests that define who they give money to 2) democratic countries and international institutions have weakly democratic strategic aims whereas autocratic donors have weakly autocratic aims. 
+
+One period game. Competition when more than one donor present, where recipient can choosing between IMF loan and investment from other countries. Countries compete by offering more money or lowering concessions required. What about reneging? (recipients less likely to renege when donor matches their policy preference as concessions are lower? Or reputation loss and inability to get future monies?)  Implications being that countries have had to make less concessions over time due to competition and tend to accept money from donors with similar preferences, if available.
+
+\textbf{Expected Implications} 
+\begin{align*}
+    H_1:\; &\text{Autocratic recipients choose to rather receive money from autocratic donors than}\\
+    &\text{international organizations or democratic donors.}\\
+    H_2:\; &\text{Recipients of (democratic) autocratic aid will become weakly more (democratic) autocratic.}
+\end{align*}
+
+\section*{Alternative Explanations}
+
+\section*{Methodology}
+Some descriptive stats on foreign aid spending by country and organization over time. 
+
+Test: Look at countries who previously received IMF funding who switched to Chinese money, use it as treatment?
+
+\section*{Complications}
+
+
+\printbibliography
+\end{document}
