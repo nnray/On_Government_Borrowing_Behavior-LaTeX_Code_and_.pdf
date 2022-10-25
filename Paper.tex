@@ -6,6 +6,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{mathtools,amssymb,amsthm}
 \usepackage{setspace}
+\usepackage{tikz}
+\usepackage{sgame}
 \doublespacing
 \usepackage[backend=biber, style=authoryear, maxbibnames=99, uniquelist=false]{biblatex}
 \renewbibmacro{in:}{}
@@ -36,15 +38,101 @@ BRI (\cite{dreher2022}), Globalization (papers from week 6)?
 Lots of academic attention on supply side provision of aid given China's entrance (e.g., \cite{dreher2018}, \cite{dreher2015}), but few explorations of the demand side after China has become a prevalent donor. Also research on how Chinese aid affects recipients in various ways (e.g., \cite{martorano2020}, \cite{bader2015}).
 This paper seeks to address this shortage in the literature, aiming to understand how recipient countries choose between the vast number of credible donors. Relevant literature: \cite{kilama2016a}, \cite{hernandez2017}, \cite{li2017a}, \cite{isaksson2018}, \cite{humphrey2019}, \cite{broich2017a}.
 
-Research Question. Given the literature, the decision-making of recipient countries no longer seems so trivial (i.e., why are countries choosing to receive aid money from China?). The literature implies that there should be a healthy mix of aid donor money given the effects shown. Some strategy is no involved on behalf of the recipient country; if we are not seeing a diversified diet in aid receipt, why not? Seems best.
+Research Question. Given the literature, the decision-making of recipient countries no longer seems so trivial (i.e., why are countries choosing to receive aid money from China?). The literature implies that there should be a healthy mix of aid donor money given the effects shown, implying that there should be some strategy present in recipient countries.
 
 \section*{Theory}
-Explanation
+In an attempt to model the effects of having more than one donor on recipient behavior, especially when donors display heterogeneity in their loaning practices, I formalize a bargaining interaction between a recipient country and two types of donors. Figure 1 illustrates the extensive-form of the interaction and can be found in the appendix.  
 
-\section*{Methodology}
+Bargaining occurs over two periods, with the first donor ($D_1$) making an initial loan offer ($x_1$) to the recipient ($R$). If the recipient accepts the loan, the first donor gets a payoff ($1-x_1$) that corresponds to the expected benefits from the conditions of the loan (e.g., political reform, trade liberalization). The recipient gains the value of the loan, $x_1$.
+
+If the recipient rejects the offer, then the second donor ($D_2$) has an opportunity to proffer a loan ($x_2$). Acceptance by the recipient in this second period yields similar payoffs to those in the first (i.e., $1-x_2$ and $x_2$), except now there are two additional parameters, $\delta$ and $\gamma$, such that the recipient's value of the loan in the second period totals to $\delta \gamma x_2$. Consequently, the donor would receive $1-\delta \gamma x_2$ if the offer is accepted.
+
+The parameter $\delta$ commonly appears in multi-period bargaining models and is referred to as a discount factor. The substantive interpretation in this scenario is that recipients shopping for loans have some time sensitive reason for wanting a loan, such as an economic crisis. The smaller that $\delta$ is, the more harmful it is for recipients to refuse the first loan offer they receive and wait for another. Parameter $\gamma$ relates to the level of uncertainty surrounding the conditionality of the loan in period two, where smaller values of $\gamma$ denote greater ambiguity. This allows the model to capture variation in the ``officialness'' of aid, or the heterogeneity between donors who are more restricted and transparent in the sort of conditions they can impose versus those who have more freedom to set conditions and the clarity surrounding them.
+
+The outcome of the game is that the first donor offers a marginally better loan to the recipient than the second donor $ceteris\;paribus$ (see appendix). In other words, in almost all cases the presence of a second credible donor induces competition that benefits the recipient, regardless of the exact nature of donor two's lending practices. Unless the recipient is in perfectly extreme need (i.e., $\delta=0$) or the second donor is perfectly shady about it's loans (i.e., $\gamma=0$), then a diversified set of donors induces loans that are more favorable to the recipient.
+
+The first donor's offer is largest, though, when the severity of recipient need is low (high $\delta$) and the second donor is anticipated to implement clear conditions (high $\gamma$). This implies the comparative statics that as severity of need increases (i.e., $\delta$ gets smaller) or clarity of conditionality decreases (i.e., $\gamma$ gets smaller), loan value decreases for the recipient. Theoretically, loan value to the recipient can be manipulated by either altering the amount of money loaned or by changing the conditions to be imposed.
+
+The above analysis produces the following hypotheses, conditional on the presence of a diverse set of donors:
+
+\begin{align*}
+    H_{1_a}&:\;\text{An increase (decrease) in severity of recipient need will decrease (increase) the amount of money}\\
+    &\;\text{offered via loans}\\
+    H_{1_b}&:\;\text{An increase (decrease) in severity of recipient need will increase (decrease) the stringency of loan}\\
+    &\;\text{conditions}\\
+    H_{2_a}&:\;\text{An increase (decrease) in the clarity of loan conditionality will increase (decrease) the amount of}\\
+    &\;\text{money offered via loans}\\
+    H_{2_b}&:\;\text{An increase (decrease) in the clarity of loan conditionality will decrease (increase) the stringency}\\
+    &\;\text{of loan conditions}\\
+\end{align*}
+
+
+
+Implications: the more unofficial, ambiguous loans that a country receives from China, the less competitive offer they will receive from more official, Western flows. The more ODA-like, official loans they receive from China, the better offers they will receive from Western institutions.
+
+\section*{Operationalization}
+Western loans (bilateral and multilateral?) as first donor, China as second with the variation in officialness in aid conditionality.
+
 Data \& Variables
+Aiddata for Chinese aid, OECD data for Western aid (World Bank or IMF?), GDP per capita part of need but need a different measure to get at temporal shocks/crises.
 
 Research Design
+
+\pagebreak
+\section*{Appendix}
+\subsection*{Figure 1}
+\begin{tikzpicture}[scale=1,font=\footnotesize]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+    \tikzstyle{level 1}=[level distance=2cm,sibling distance=2cm]
+    \tikzstyle{level 2}=[level distance=2cm,sibling distance=2cm]
+    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
+    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
+    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
+    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
+    \node(0)[solid node,label=above:{$D_1$},label=below:{$x_1$}]{}
+        child{node{}}
+        child{node[solid node,label=above:{$R$}]{}
+            child{node[hollow node,label=below:{$1-x_1,\; x_1,\; 0$}]{} edge from parent node[left]{Accept} edge from parent node[right,xshift=10mm]{Reject} edge from parent node[right,xshift=15mm,yshift=30mm]{$0\leq x_{t}<1,\;t=1$}}
+                child{node[solid node,label=above:{$D_2$},label=below:{$x_2$}]{}
+                    child{node{}}
+                        child{node[solid node,label=above:{$R$}]{}
+                                child{node[hollow node,label=below:{$0,\; \delta \gamma x_2,\; 1-\delta \gamma x_2$}]{} edge from parent node[left]{Accept} edge from parent node[right,xshift=10mm]{Reject} edge from parent node[right,xshift=15mm,yshift=35mm]{$0\leq \delta<1,\;0\leq \gamma <1,\;t=2$}}
+                                    child{node[hollow node,label=below:{$0,\;0,\;0$}]{}
+        }
+        }
+        }
+        };
+    \draw[dashed](0-1)to(0-2);
+    \path (-1,-6) node (p1) {};
+    \path (5,-2) node (p2) {};
+    \draw[dashed] (p1) to (p2);
+    \path (1,-6) node (p3) {};
+    \path (3,-6) node (p4) {};
+    \draw[dashed] (p3) to (p4);
+\end{tikzpicture}
+
+The utility functions of the players are simply:
+\begin{align*}
+    U_R&:\;x_t\\
+    U_{D_{t}}&:\;-x_t\;
+\end{align*}
+where $t\in {1,2}$ and $x_t$ is less than one but greater than or equal to zero. Making $x_t$ less than one allows for the donors to profit from any loan they make, enabling the offering of loans in the first place.
+
+The parameters $\delta$ and $\gamma$ are all greater than or equal to zero and bounded by one. These modeling specifications seem to be without loss of generality, implying that the results are not dependent on these decisions.
+
+Solving the game via backwards induction:
+
+\begin{center}
+\begin{tabular}{c l}
+    $\delta \gamma x_2 >0$ & $R$ accepts $x_2$ iff this inequality is true in period two. \\
+    $x_2= \epsilon$ & $D_2$'s offer, where $\epsilon$ is infinitely small but greater than 0.\\
+    $x_1>\epsilon$ & The condition for $R$ to accept in period one.\\
+    $x_1=2 \epsilon$ & $D_1$'s offer, which $R$ accepts.\\
+\end{tabular}
+\end{center}
+
+Ultimately, $x_1>x_2$. Thus, competition alone increases the loan payoff for the recipient. These results are augmented by severity of need ($\delta$) and the clarity of conditionality ($\gamma$). Smaller values of either of these parameters coincides with smaller loan payoffs to the recipient in period two, which leads to smaller counteroffers by the first donor in period one.
 
 \pagebreak
 \printbibliography
