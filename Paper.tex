@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\title{\vspace{-2.75cm}Idea Brief\vspace{-0.5cm}}
+\title{\vspace{-2.75cm}On Government Borrowing Behavior\vspace{-0.5cm}}
 \author{Nicholas Ray}
-\date{\vspace{-0.30cm}October 31 2022\vspace{-1cm}}
+\date{\vspace{-0.30cm}December 7 2022\vspace{-1cm}}
 \usepackage[margin=1in]{geometry}
 \usepackage{mathtools,amssymb,amsthm}
 \usepackage{setspace}
@@ -32,120 +32,59 @@
 \begin{document}
 \maketitle
 \section*{Introduction}
-The People's Republic of China (China) established the Belt and Road Initiative (BRI) in 2013, a project aimed at increasing both China's global influence and domestic economic growth. Since then, China has become the ``lender of first resort'' for developing countries \parencite[1]{dreher2022}.
+Since engaging in a ``going out'' strategy around the turn of the century, the People's Republic of China (China) has successfully become the ``lender of first resort'' for developing countries \parencite[1]{dreher2022}. There has been an abundance of scholarly work attempting to understand the potential effects of China's contemporary prominence in the global finance arena. Much of this literature focuses on how the international financing behavior of more traditional, Western donors have been affected (e.g., \cite{humphrey2019}; \cite{kilama2016a}) or how the effectiveness of their money has changed (e.g., \cite{blair2022}; \cite{gehring2022}).
 
-There has been an abundance of scholarly work attempting to understand the potential effects of China's recent prominence in the international financing and aid arena. Most, if not all, of this literature focuses on how the behavior of other aid donors has been affected (e.g., \cite{humphrey2019}; \cite{kilama2016a}) or how the effectiveness of their aid has changed (e.g., \cite{blair2022}; \cite{gehring2022}). Essentially, this work has explored how the supply side of foreign aid has been influenced by China's aid involvement. 
+Little of this work has looked at how the behavior of recipients of international finance has updated since the availability of Chinese money. This lack of attention is despite recent work that implies that recipient countries may extract benefits from their loan choices in a more Chinese global finance environment. While the literature implies that recipients stand to gain from receiving both Chinese and Western finance and the subsequently more competitive terms, observations of borrowing practices in Africa do not seemingly reflect that countries take relatively similar levels of both loan types. 
 
-However, there has been little research on how Chinese aid affects the demand side of foreign aid (i.e., recipient behavior), despite the supply side literature implying that the presence of Chinese aid is indeed consequential for recipients. In particular, it appears that the democratizing effects of aid from the Organization for Economic Cooperation and Development (OECD) has been reduced in light of Chinese aid (\cite{li2017a}) and that the World Bank provides fewer conditions for it's loans to potentially compete with China (\cite{hernandez2017}).
+I argue that this is due to time-inconsistency problems where countries prefer Western or Chinese loans over the other in the short-run. Understanding the debt composition of developing countries is an increasingly important issue as public debt continues to rise. This research could also shed light on literature concerned about China's interaction with the liberal international order (LIO) and spark a new research agenda studying recipient behavior.
 
-Given this seemingly enhanced foreign aid competition, I argue that recipient behavior is no longer a trivial question, as the conventional wisdom assumes. It should be plausible that recipients engage in some strategy to maximize the financial package they receive from donors, possibly diversifying their aid diet to include Chinese funds and gain leverage on Western donors. 
+\section*{What Demands Explanation and Why}
+There is evidence that countries are offered fewer loan conditions from the World Bank (\cite{hernandez2017}) and that Western aid is less sensitive to policy and institutional quality (\cite{annen2021}) when they are recipients of Chinese finance. Although Dreher et al. (2021)\nocite{dreher2021} did not find a sizable negative effect of Chinese finance on Western aid's effectiveness, they did find that aid from the United States (U.S.) seems to be more effective in the absence of Chinese finance. In sum, this evidence suggests that receiving Chinese loans may induce the additional benefit of better financial terms from subsequent Western lenders.
 
-To explore the possible strategic behavior of international finance recipients in this situation, I build a formal bargaining model below. The model attempts to capture the flexibility of Chinese lending practices and the results of Chinese competition with more traditional, OECD donors.
+There is also evidence that Chinese finance increases with Western development assistance, which Dreher et al. (2018)\nocite{dreher2018} interpret as competitive behavior from China. Taken together, the literature seems to imply that there is some financial competition between the West and China that recipients may be able to take advantage of to procure more favorable borrowing terms. It follows that recipients should have a relatively diversified composition of debt between Chinese and Western lenders to stimulate this competition and term improvement.
 
-Empirically, I focus on evaluating the model's implications in Africa using available data on Chinese and Western loans. Data availability for Chinese aid limits the period of interest from 2000-2017.
+However, it is at least observed in Africa that the proportion of Chinese loans to Western loans varies substantially between counties and further that some countries almost entirely borrow from either China or the West when taking money from governments. For example, compare table 1 and table 2, which show the estimated composition of public debt in Cabo Verde and Djibouti, respectively (\cite{jubileedebtcampaign2018}). Cabo Verde owes only 1\% of its estimated total debt to China while debt to Portugal and other unspecified countries exceeds 25\%. In Djibouti, meanwhile, 68\% of its estimated debt can be attributed to China.
 
-\section*{Theory}
-\subsection*{Model}
-In an attempt to model the effects of having more than one donor on recipient behavior, especially when donors display heterogeneity in their loaning practices, I formalize a bargaining interaction between a recipient country and two types of donors. Figure 1 illustrates the extensive-form of the interaction and can be found in the appendix.  
+\begin{table}
+    \centering
+    \includegraphics[scale=0.5]{Figures/CaboVerde.png}
+    \caption{Estimated Debt for Cabo Verde}
+    \vspace{1cm}
+    \includegraphics[scale=0.5025]{Figures/Djibouti.png}
+    \caption{Estimated Debt for Djibouti}
+\end{table}
 
-Bargaining occurs over two periods, with the first donor ($D_1$) making an initial loan offer ($x_1$) to the recipient ($R$). If the recipient accepts the loan, the first donor gets a payoff ($1-x_1$) that corresponds to the expected benefits from the conditions of the loan (e.g., political reform, trade liberalization). The recipient gains the value of the loan, $x_1$.
+Thus, the variance in debt composition and the seeming failure of countries to borrow in a more equal manner between China and Western entities must be explained. In other words, how do recipient countries decide between taking loans from China and the West? Taking loans is costly, at least in the long-run, and recipients presumably want to maximize the payoff they receive from borrowing. Related literature seems to not have fully considered recipient decision-making with regard to choosing a borrower, instead largely focusing on macroeconomic and political determinants of government debt (e.g., \cite{bittencourt2015} ; \cite{swamy2015}) or the determinants of lender behavior (e.g., \cite{dreher2018}).
 
-If the recipient rejects the offer, then the second donor ($D_2$) has an opportunity to proffer a loan ($x_2$). Acceptance by the recipient in this second period yields similar payoffs to those in the first (i.e., $1-x_2$ and $x_2$), except now there are two additional parameters, $\delta$ and $\gamma$, such that the recipient's value of the loan in the second period totals to $\delta \gamma x_2$. Consequently, the donor would receive $1-\delta \gamma x_2$ if the offer is accepted.
+\section*{My Explanation}
+I argue that the variation observed in African borrowing practices is a result of strategic considerations on behalf of recipients. Specifically, I argue that some countries take Chinese and Western finance at substantially different rates due to dissimilarities in the conditions of Western and Chinese loans and the subsequent evaluations of loan value by recipients.
 
-The parameter $\delta$ commonly appears in multi-period bargaining models and is referred to as a discount factor. The substantive interpretation in this scenario is that recipients shopping for loans have some time sensitive reason for wanting a loan, such as an economic crisis. The smaller that $\delta$ is, the more harmful it is for recipients to refuse the first loan offer they receive and wait for another. Parameter $\gamma$ relates to the level of uncertainty surrounding the conditionality of the loan in period two, where smaller values of $\gamma$ denote greater ambiguity. This allows the model to capture variation in the ``officialness'' of aid, or the heterogeneity between donors who are more restricted and transparent in the sort of conditions they can impose versus those who have more freedom to set conditions and the clarity surrounding them.
+There is evidence that China might be simultaneously more strict on the economic conditions on their finance (e.g., \cite{dreher2018}) while also less strict on the political conditions imposed (e.g., \cite{dreher2018}). Western loans, by contrast, seem more politically strict than economic (\cite{hernandez2017}). This dissimilarity leads to time-inconsistency problems, where in the short-term countries prefer either less severe economic or political conditions instead of minimizing the joint conditionality over the long-term.
 
-The outcome of the game is that the first donor offers a marginally better loan to the recipient than the second donor $ceteris\;paribus$ (see appendix). In other words, in almost all cases the presence of a second credible donor induces competition that benefits the recipient, regardless of the exact nature of donor two's lending practices. Unless the recipient is in perfectly extreme need (i.e., $\delta=0$) or the second donor is perfectly shady about it's loans (i.e., $\gamma=0$), then a diversified set of donors induces loans that are more favorable to the recipient.
+One implication is that more democratic countries should be more sensitive to explicitly political conditions and, thus, prefer Western loans $ceteris\;paribus$. This could also explain Dreher et al.'s (2018) findings that Chinese loans seem to flow to more corrupt countries and those with poorer political institutions.
 
-\subsection*{Implications}
-The first donor's offer is largest, though, when the severity of recipient need is low (high $\delta$) and the second donor is anticipated to implement clear conditions (high $\gamma$). This implies the comparative statics that as severity of need increases (i.e., $\delta$ gets smaller) or clarity of conditionality decreases (i.e., $\gamma$ gets smaller), loan value decreases for the recipient. This analysis produces the following hypotheses, conditional on the presence of a diverse set of donors:
-\begin{align*}
-    &\textbf{Recipient Need is Inversely Related to Loan Value}\\
-    H_{1_a}&:\;\text{An increase in severity of recipient need will decrease the amount of money offered via loans}\\
-    H_{1_b}&:\;\text{A decrease in severity of recipient need will increase the amount of money offered via loans}\\
-    &\textbf{Condition Clarity is Directly Related to Loan Value}\\
-    H_{2_a}&:\;\text{An increase in the clarity of loan conditionality will increase the amount of money offered via loans}\\
-    H_{2_b}&:\;\text{A decrease in the clarity of loan conditionality will decrease the amount of money offered via loans}\\
-\end{align*}
-In other words, I expect to find the following relationship:
-
-\subsection*{Table 1}
-\begin{tabular}{c|c c }
-    & Severity of Recipient Need & Clarity of Loan Conditionality\\
-    \hline
-    High & Low Loan Value & High Loan Value\\
-    Low & High Loan Value & Low Loan Value\\
-\end{tabular}
-
-\section*{Empirics}
-\subsection*{Operationalization}
-To evaluate the theoretical expectations I focus on the international loan environment in Africa since the year 2000. Loan value, or the total sum of money being loaned to an African country, is the dependent variable. The main explanatory variables of interest are recipient need and the clarity of loan conditionality. Recipient need is captured by gross domestic product (GDP) per capita while the clarity of loan conditionality will be an indicator for how ``offical'' aid is. Thus, the empirical model is:
-
-$\text{Loan Value}= \beta_0 + \beta_1 \text{GDP per capita}+ \beta_2 \text{Loan Conditionality}+ \gamma_i x_i + \varepsilon$,
-
-where $x_i$ is a vector of controls.
-
-\subsection*{Data \& Variables}
-For data on international loans, I use data from William \& Mary's ``Aiddata'' lab for Chinese loans (\cite{custer2021}) and data from the OECD on Western loans (\cite{oecd2022}). GDP per capita stems from the World Bank (\cite{bank2022}) while I am currently exploring measures for loan conditionality. The most overly-simplistic (and not accurate) idea is to label all Chinese loans as ``low'' or ``vague'' in their conditionality while rating all Western loans as ``high'' or ``clear'' in their loan conditions. There is data on World Bank conditionality, though, (see \cite{hernandez2017}, for example) but I have yet to analyze the Chinese data for conditionality measures.
-
-\subsection*{Estimation}
-I plan to estimate the regression equation above using panel data and OLS with country-fixed effects and clustered standard errors by country.
-
-\pagebreak
-\section*{Appendix}
-\subsection*{Figure 1}
-\begin{tikzpicture}[scale=1,font=\footnotesize]
-    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
-    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
-    \tikzstyle{level 1}=[level distance=2cm,sibling distance=2cm]
-    \tikzstyle{level 2}=[level distance=2cm,sibling distance=2cm]
-    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
-    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
-    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
-    \tikzstyle{level 3}=[level distance=2cm,sibling distance=2cm]
-    \node(0)[solid node,label=above:{$D_1$},label=below:{$x_1$}]{}
-        child{node{}}
-        child{node[solid node,label=above:{$R$}]{}
-            child{node[hollow node,label=below:{$1-x_1,\; x_1,\; 0$}]{} edge from parent node[left]{Accept} edge from parent node[right,xshift=10mm]{Reject} edge from parent node[right,xshift=15mm,yshift=30mm]{$0\leq x_{t}<1,\;t=1$}}
-                child{node[solid node,label=above:{$D_2$},label=below:{$x_2$}]{}
-                    child{node{}}
-                        child{node[solid node,label=above:{$R$}]{}
-                                child{node[hollow node,label=below:{$0,\; \delta \gamma x_2,\; 1-\delta \gamma x_2$}]{} edge from parent node[left]{Accept} edge from parent node[right,xshift=10mm]{Reject} edge from parent node[right,xshift=15mm,yshift=35mm]{$0\leq \delta<1,\;0\leq \gamma <1,\;t=2$}}
-                                    child{node[hollow node,label=below:{$0,\;0,\;0$}]{}
-        }
-        }
-        }
-        };
-    \draw[dashed](0-1)to(0-2);
-    \path (-1,-6) node (p1) {};
-    \path (5,-2) node (p2) {};
-    \draw[dashed] (p1) to (p2);
-    \path (1,-6) node (p3) {};
-    \path (3,-6) node (p4) {};
-    \draw[dashed] (p3) to (p4);
+\subsubsection*{Figure 1: Non-Democratic Country Loan Preference, $ceteris\;paribus$}
+\begin{tikzpicture}[scale=2,declare function={F(\x) = 1.7*(2*\x-\x*\x)-0.2;}]
+  \draw[-latex] (0,-0.2) -- (0,2) node[left]{$Utility$};
+  \draw[-latex] (-0.2,0) -- (2,0) node[below right]{$Political\;Conditionality$};
+  \draw[domain=0.1:1.9,samples=10,smooth,thick] plot (\x, {F(\x)}); 
+  \coordinate (max) at (0,{F(1)});
+  \draw[dashed] (max) -| (1,0) node[pos=1,below]{China};
+  \coordinate (max) at (0,{F(1.5)});
+  \draw[dashed] (max) -| (1.5,0) node[pos=1,below]{West};
 \end{tikzpicture}
 
-The utility functions of the players are simply:
+\section*{Research Design}
+The implication above leads to the following hypotheses:
 \begin{align*}
-    U_R&:\;x_t\\
-    U_{D_{t}}&:\;-x_t\;
+    H_{1a}&:\;\text{Democracies should receive more Western loans than Chinese loans}\\
+    H_{1b}&:\;\text{Non-democracies should receive more Chinese loans than Western loans}\\
 \end{align*}
-where $t\in {1,2}$ and $x_t$ is less than one but greater than or equal to zero. Making $x_t$ less than one allows for the donors to profit from any loan they make, enabling the offering of loans in the first place.
+To test these hypotheses I intend to focus on the international loan environment in Africa since from the years 2000 to 2020 due the continent being a major area of focus for China's finance projects and this being the time period most relevant for Chinese finance. I will fit a logit/probit model with the lender type (e.g., majority Western or not) as my dependent variable. The main explanatory variables will be regime type and a measure for loan conditionality. Ideally, an instrumental variable will be used for regime type since there is theoretically expected to be simultaneity present. Further, I will include gross domestic product (GDP) per capita as a control for recipient need and an additional control for the gross sum of the loan to ensure comparison.
 
-The parameters $\delta$ and $\gamma$ are all greater than or equal to zero and bounded by one. These modeling specifications seem to be without loss of generality, implying that the results are not dependent on these decisions.
+I plan to use data from William \& Mary's ``Aiddata'' lab for Chinese loans (\cite{custer2021}) and data from the Organization for Economic Co-operation and Development (OECD) on Western loans (\cite{organizationforeconomicco-operationanddevelopment2022a}). GDP per capita stems from the United Nations (\cite{unitednationsstatisticsdivision2019}). For regime type, I intend to use an updated version of Cheibub et al.'s dictatorship and democracy index (\cite{cheibub2010}).
 
-Solving the game via backwards induction:
-
-\begin{center}
-\begin{tabular}{c l}
-    $\delta \gamma x_2 >0$ & $R$ accepts $x_2$ iff this inequality is true in period two. \\
-    $x_2= \epsilon$ & $D_2$'s offer, where $\epsilon$ is infinitely small but greater than 0.\\
-    $x_1>\epsilon$ & The condition for $R$ to accept in period one.\\
-    $x_1=2 \epsilon$ & $D_1$'s offer, which $R$ accepts.\\
-\end{tabular}
-\end{center}
-
-Ultimately, $x_1>x_2$. Thus, competition alone increases the loan payoff for the recipient. These results are augmented by severity of need ($\delta$) and the clarity of conditionality ($\gamma$). Smaller values of either of these parameters coincides with smaller loan payoffs to the recipient in period two, which leads to smaller counteroffers by the first donor in period one.
-
+\nocite{curini2020}
 \pagebreak
 \printbibliography
 \end{document}
