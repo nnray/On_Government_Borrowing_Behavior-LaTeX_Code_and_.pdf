@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \title{\vspace{-2.75cm}On Government Borrowing Behavior\vspace{-0.5cm}}
 \author{Nicholas Ray}
@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{sgame}
 \doublespacing
+\usepackage[colorlinks,citecolor=cyan,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
 \usepackage[backend=biber, style=authoryear, maxbibnames=99, uniquelist=false]{biblatex}
 \renewbibmacro{in:}{}
 \renewbibmacro*{volume+number+eid}{%
@@ -28,20 +29,38 @@
     \clearfield{url}
   }
 }
-\addbibresource{ForeignAidBib.bib}
+\DeclareCiteCommand{\citeyear}
+    {\usebibmacro{prenote}}
+    {\bibhyperref{\printfield{year}}\bibhyperref{\printfield{extrayear}}}
+    {\multicitedelim}
+    {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\citeyearpar}[\mkbibparens]
+    {\usebibmacro{prenote}}
+    {\bibhyperref{\printfield{year}}\bibhyperref{\printfield{extrayear}}}
+    {\multicitedelim}
+    {\usebibmacro{postnote}}
+\addbibresource{ForeignAid.bib}
 \begin{document}
 \maketitle
+\begin{abstract}
+    
+\end{abstract}
+
+\textit{Keywords}: 
+
 \section*{Introduction}
 Since engaging in a ``going out'' strategy around the turn of the century, the People's Republic of China (China) has successfully become the ``lender of first resort'' for developing countries \parencite[1]{dreher2022}. There has been an abundance of scholarly work attempting to understand the potential effects of China's contemporary prominence in the global finance arena. Much of this literature focuses on how the international financing behavior of more traditional, Western donors have been affected (e.g., \cite{humphrey2019}; \cite{kilama2016a}) or how the effectiveness of their money has changed (e.g., \cite{blair2022}; \cite{gehring2022}).
 
-Little of this work has looked at how the behavior of recipients of international finance has updated since the availability of Chinese money. This lack of attention is despite recent work that implies that recipient countries may extract benefits from their loan choices in a more Chinese global finance environment. While the literature implies that recipients stand to gain from receiving both Chinese and Western finance and the subsequently more competitive terms, observations of borrowing practices in Africa do not seemingly reflect that countries take relatively similar levels of both loan types. 
+Little of this work, however, has looked at how the behavior of recipients of international finance has updated since the availability of Chinese money. This lack of attention is despite recent work that implies that recipient countries may extract benefits from their loan choices in a more Chinese global finance environment. While the literature suggests that recipients stand to gain from receiving both Chinese and Western finance and the subsequently more competitive terms, observations of borrowing practices in Africa do not seemingly reflect that recipients are engaging in a strategy to leverage competition between lenders.
+% i.e., that countries take relatively similar levels of both loan types. 
 
 I argue that this is due to time-inconsistency problems where countries prefer Western or Chinese loans over the other in the short-run. Understanding the debt composition of developing countries is an increasingly important issue as public debt continues to rise. This research could also shed light on literature concerned about China's interaction with the liberal international order (LIO) and spark a new research agenda studying recipient behavior.
 
 \section*{What Demands Explanation and Why}
-There is evidence that countries are offered fewer loan conditions from the World Bank (\cite{hernandez2017}) and that Western aid is less sensitive to policy and institutional quality (\cite{annen2021}) when they are recipients of Chinese finance. Although Dreher et al. (2021)\nocite{dreher2021} did not find a sizable negative effect of Chinese finance on Western aid's effectiveness, they did find that aid from the United States (U.S.) seems to be more effective in the absence of Chinese finance. In sum, this evidence suggests that receiving Chinese loans may induce the additional benefit of better financial terms from subsequent Western lenders.
+There is evidence that countries are offered fewer loan conditions from the World Bank (\cite{hernandez2017}) and that Western aid is less sensitive to policy and institutional quality (\cite{annen2021}) when they are recipients of Chinese finance. Although Dreher et al. \citeyear{dreher2021} did not find a sizable negative effect of Chinese finance on Western aid's effectiveness, they did find that aid from the United States (U.S.) seems to be more effective in the absence of Chinese finance. In sum, this evidence suggests that receiving Chinese loans may induce the additional benefit of better financial terms from subsequent Western lenders.
 
-There is also evidence that Chinese finance increases with Western development assistance, which Dreher et al. (2018)\nocite{dreher2018} interpret as competitive behavior from China. Taken together, the literature seems to imply that there is some financial competition between the West and China that recipients may be able to take advantage of to procure more favorable borrowing terms. It follows that recipients should have a relatively diversified composition of debt between Chinese and Western lenders to stimulate this competition and term improvement.
+There is also evidence that Chinese finance increases with Western development assistance, which Dreher et al. \citeyear{dreher2018} interpret as competitive behavior from China. Taken together, the literature seems to imply that there is some financial competition between the West and China that recipients may be able to take advantage of to procure more favorable borrowing terms. It follows that recipients should have a relatively diversified composition of debt between Chinese and Western lenders to stimulate this competition and term improvement.
 
 However, it is at least observed in Africa that the proportion of Chinese loans to Western loans varies substantially between counties and further that some countries almost entirely borrow from either China or the West when taking money from governments. For example, compare table 1 and table 2, which show the estimated composition of public debt in Cabo Verde and Djibouti, respectively (\cite{jubileedebtcampaign2018}). Cabo Verde owes only 1\% of its estimated total debt to China while debt to Portugal and other unspecified countries exceeds 25\%. In Djibouti, meanwhile, 68\% of its estimated debt can be attributed to China.
 
