@@ -1,4 +1,19 @@
 \section*{Rough Draft}
+This dissimilarity leads to time-inconsistency problems, where in the short-term countries prefer either less severe economic or political conditions instead of minimizing the joint conditionality over the long-term.
+
+
+One implication is that more democratic countries should be more sensitive to explicitly political conditions and, thus, prefer Western loans $ceteris\;paribus$. 
+
+\subsubsection*{Figure 1: Non-Democratic Country Loan Preference, $ceteris\;paribus$}
+\begin{tikzpicture}[scale=2,declare function={F(\x) = 1.7*(2*\x-\x*\x)-0.2;}]
+  \draw[-latex] (0,-0.2) -- (0,2) node[left]{$Utility$};
+  \draw[-latex] (-0.2,0) -- (2,0) node[below right]{$Political\;Conditionality$};
+  \draw[domain=0.1:1.9,samples=10,smooth,thick] plot (\x, {F(\x)}); 
+  \coordinate (max) at (0,{F(1)});
+  \draw[dashed] (max) -| (1,0) node[pos=1,below]{China};
+  \coordinate (max) at (0,{F(1.5)});
+  \draw[dashed] (max) -| (1.5,0) node[pos=1,below]{West};
+\end{tikzpicture}
 
 \section*{Idea Brief}
 \subsection*{What needs to be explained}
