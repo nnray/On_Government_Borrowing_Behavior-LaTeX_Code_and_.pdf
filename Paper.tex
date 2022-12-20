@@ -1,44 +1,8 @@
 \documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
 \title{\vspace{-2.75cm}On Government Borrowing Behavior\vspace{-0.5cm}}
 \author{Nicholas Ray}
 \date{\vspace{-0.30cm}December 15 2022\vspace{-1cm}}
-\usepackage[margin=1in]{geometry}
-\usepackage{mathtools,amssymb,amsthm}
-\usepackage{setspace}
-\usepackage{tikz}
-\usepackage{sgame}
-\doublespacing
-\usepackage[colorlinks,citecolor=cyan,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
-\usepackage[backend=biber, style=authoryear, maxbibnames=99, uniquelist=false]{biblatex}
-\renewbibmacro{in:}{}
-\renewbibmacro*{volume+number+eid}{%
-  \printfield{volume}
-  \setunit*{\addnbthinspace}
-  \printfield{number}
-  \setunit{\addcomma\space}
-  \printfield{eid}}
-\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
-\AtEveryBibitem{
-  \clearfield{issn}
-  \clearfield{month}
-  \clearfield{urlyear}
-  \clearlist{language}
-  \clearfield{note}
-  \ifentrytype{online}{}{
-    \clearfield{url}
-  }
-}
-\DeclareCiteCommand{\citeyear}
-    {\usebibmacro{prenote}}
-    {\bibhyperref{\printfield{year}}\bibhyperref{\printfield{extrayear}}}
-    {\multicitedelim}
-    {\usebibmacro{postnote}}
-\DeclareCiteCommand{\citeyearpar}[\mkbibparens]
-    {\usebibmacro{prenote}}
-    {\bibhyperref{\printfield{year}}\bibhyperref{\printfield{extrayear}}}
-    {\multicitedelim}
-    {\usebibmacro{postnote}}
+\input{Preamble.tex}
 \addbibresource{ForeignAid.bib}
 \begin{document}
 \maketitle
